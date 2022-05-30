@@ -1,0 +1,342 @@
+:root {
+    font-size: 16px;
+    max-width: 100%;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    --main-color: hsla(10, 0%, 90%, 1);
+    --accent-color: hsla(10, 0%, 80%, 1);
+    --dark-color: hsla(10, 0%, 60%, 1);
+    --text-color: hsla(10, 0%, 30%, 1);
+    --link-color: hsla(15, 80%, 50%, 1);
+    --company-color: blue;
+
+
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 2.5rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 400px) {
+    nav {
+        width: 50%;
+    }
+}
+
+nav h1 {
+    position: relative;
+    left: 1rem;
+    top: 0.2rem;
+    display: inline;
+    color: black;
+}
+
+nav ul {
+    margin: 0;
+    float: right;
+}
+
+nav li {
+    top: 0;
+    float: right;
+    padding: 0.5rem 1rem 0.375rem 0;
+    font-size: 1.25rem;
+    list-style-type: none;
+}
+
+a:link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+a:visited {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+#h3-link:visited {
+    color: var(--text-color)
+}
+
+main {
+    position: relative;
+    top: 2rem;
+}
+
+/* Basic centered company logo
+
+.banner {
+    position: relative;
+    background-image: url(imgs/main-banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.banner .company-logo {
+    margin: auto;
+} */
+
+.banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    height: 20rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-image: url(imgs/main-banner2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner .company-logo {
+    margin: auto;
+}
+
+.banner-info {
+    position: relative;
+    top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    color: white;
+}
+
+.banner-phone {
+    background-color: hsla(10, 0%, 60%, 0.8);
+    width: 20rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--company-color);
+    width: 10rem;
+    height: 2rem;
+    margin: 5% auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.button a {
+    width: 200%;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    transition-duration: 0.7s;
+}
+
+@media only screen and (max-width: 740px) {
+    nav h1 {
+        display: none;
+    }
+
+    .banner {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem;
+        max-height: 20rem;
+    }
+    
+    .banner .company-logo {
+        margin-top: 2rem;
+    }
+
+    .button {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    nav {
+        width: 50%;
+    }
+
+    .banner {
+        width: 100%;
+        padding-left: 1rem;
+    }
+}
+
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: var(--accent-color);
+    height: 2.5rem;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav h1 {
+    position: relative;
+    color: black;
+    display: inline;
+    left: 1rem;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+}
+
+nav li {
+    float: right;
+    top: 0;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.375rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a:link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+#h3-link:visited {
+    color: var(--text-color)
+}
+
+main {
+    position: relative;
+    top: 2rem;
+    max-width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+
+
+
+.topic {
+    margin: 5% 10% 15%;
+    font-size: 1.3rem;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    border-bottom: 1px solid #000;
+}
+
+@media only screen and (max-width: 900px) {
+    .topic-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.topic-p1 {
+    grid-column: 1/3;
+}
+
+.topic-img1, .topic-img2 {
+    align-self: center;
+    justify-self: center;
+    height: 80%;
+    width: 100%;
+}
+
+.topic-p2 {
+    grid-column: 2/4;
+}
+
+.topic-img2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+[class*=container] {
+    background-color: var(--accent-color);
+    margin: 1rem;
+} 
+
+figure {
+    margin: 5% 5% 2% 5%;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+}
+
+figcaption {
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+    padding: 1rem;
+}
+
+#other-services h3 {
+    text-align: center;
+}
+
+.other-services-flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.other-services-flex ul li {
+    list-style-type: disc;
+}
+
+.footer-flex {
+    display: flex;
+    max-height: 10rem;
+    margin-top: 2rem;
+    background-color: var(--dark-color);
+    bottom: 0;
+    justify-content: space-around;
+}
+
+.footer-container {
+    max-height: 8rem;
+    overflow: hidden;
+}
+
+.footer-container figure img {
+    height: 4rem;
+}
+
+.copyright {
+    background-color: var(--dark-color);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+

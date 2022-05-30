@@ -27,7 +27,7 @@ nav {
     z-index: 1;
 }
 
-@media only screen and (max-device-width: 400px) {
+@media only screen and (max-width: 400px) {
     nav {
         width: 50%;
     }
@@ -148,7 +148,7 @@ main {
     transition-duration: 0.7s;
 }
 
-@media only screen and (max-device-width: 740px) {
+@media only screen and (max-width: 740px) {
     nav h1 {
         display: none;
     }
@@ -168,7 +168,7 @@ main {
     }
 }
 
-@media only screen and (max-device-width: 400px) {
+@media only screen and (max-width: 400px) {
     nav {
         width: 50%;
     }
@@ -253,7 +253,7 @@ h2 {
     border-bottom: 1px solid #000;
 }
 
-@media only screen and (max-device-width: 900px) {
+@media only screen and (max-width: 900px) {
     .topic-grid {
         display: flex;
         flex-direction: column;

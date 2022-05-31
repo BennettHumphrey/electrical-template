@@ -190,8 +190,10 @@ main {
     }
 }
 
-@media only screen and (max-width: 345px) {
+@media only screen and (max-width: 344px) {
     .banner-phone {
+        position: relative;
+        top: -0.5rem;
         margin-top: 0;
     }    
 }

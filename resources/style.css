@@ -248,11 +248,5 @@ figcaption {
     color: white;
 }
 
-/* Hack change that for some reason fixes everything while under 400px */
 
-@media only screen and (max-width: 400px) {
-    body {
-        width: 150%;
-    }
-}
 

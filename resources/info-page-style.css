@@ -13,9 +13,15 @@
 
 }
 
-body {
-    margin: 0;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: auto; 
 }
+
 
 nav {
     position: fixed;
@@ -111,6 +117,10 @@ main {
     margin: auto;
 }
 
+.company-logo img {
+    width: 100%;
+}
+
 .banner-info {
     position: relative;
     top: 3rem;
@@ -154,12 +164,13 @@ main {
     }
 
     .banner {
+        top: 2.5rem;
         grid-template-columns: 1fr;
         grid-template-rows: 10rem;
         max-height: 20rem;
     }
     
-    .banner .company-logo {
+    .company-logo {
         margin-top: 2rem;
     }
 
@@ -169,14 +180,20 @@ main {
 }
 
 @media only screen and (max-width: 400px) {
-    nav {
-        width: 50%;
-    }
 
     .banner {
-        width: 100%;
-        padding-left: 1rem;
+        padding: 0;
     }
+
+    .banner-phone {
+        width: 85%; 
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .banner-phone {
+        margin-top: 0;
+    }    
 }
 
 
@@ -237,12 +254,8 @@ h2 {
     text-align: center;
 }
 
-
-
-
-
 .topic {
-    margin: 5% 10% 15%;
+    margin: 5% 10% 5%;
     font-size: 1.3rem;
 }
 

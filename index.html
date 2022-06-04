@@ -1,10 +1,3 @@
-<!-- Still needs:
-Banner
-Footer 
-Our Team section
-Form  -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,25 +5,20 @@ Form  -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/style.css">
-    <title>Document</title>
+    <script defer src="resources/script.js"></script>
+    <title>COMPANYNAME</title>
 </head>
 <body>
     <header>
         <nav>
-            <h1>Best Electrical Company in CITYNAME</h1>
+            <h1 id="best-company">Best Electrical Company in CITYNAME</h1>
+            <h1 id="phone-number">PHONENUMBER</h1>
             <ul>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#our-team">Our Team</a></li>
             </ul>
         </nav>
-        <!--Basic centered company logo 
-            
-            <section class="banner">
-            <div class="company-logo">
-                <img src="resources/imgs/company-logo.png" alt="COMPANYNAME logo">
-            </div>
-        </section> -->
 
         <section class="banner">
             <div class="company-logo">
@@ -39,15 +27,40 @@ Form  -->
 
             <div class="banner-info">
                 <h2 class="banner-phone">To contact an electrician call<br>PHONENUMBER now!</h2>
-                <a class="email" href="#services">
-                <div class="button">
-                    <p>EMAILADDRESS</p>
-                </a>
-                </div>  
+                
+                <button data-modal-target="#modal" class="button">Request a Service!</button>
+                
             </div>
 
     </header>
     <main>
+
+        <div class="modal" id="modal">
+            <div class="pop-up">
+                <div id="pop-up-container">
+                    <h1>Request a Service!</h1>
+                    <form target="_blank" action="https://formsubmit.co/f3f67705fd63048a39353bfe235a5ac6" method="POST">
+                      <div class="form-group">
+                        <div class="form-row">
+                          <div class="col">
+                            <input type="text" name="Name" class="form-control" placeholder="Full Name" required>
+                          </div>
+                          <div class="col">
+                            <input type="email" name="Email" class="form-control" placeholder="Email Address" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <textarea placeholder="Your Message" class="form-control" name="Message" rows="10" required></textarea>
+                      </div>
+                      <button type="submit" class="submit">Submit Form</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="overlay"></div> 
+
+
         <h2 class="services-header">The most trustworthy CITYNAME electrical company</h2>
         <section id="services">
             

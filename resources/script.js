@@ -1,3 +1,5 @@
+//Modal
+
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
@@ -34,3 +36,22 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+
+//Dropdown menu
+
+document.addEventListener("click", e => {
+  const isDropdownButton = e.target.matches("[data-dropdown-button]")
+  if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
+
+  let currentDropdown
+  if (isDropdownButton) {
+    currentDropdown = e.target.closest("[data-dropdown]")
+    currentDropdown.classList.toggle("active")
+  }
+
+  document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+    if (dropdown === currentDropdown) return
+    dropdown.classList.remove("active")
+  })
+})

@@ -1,4 +1,4 @@
-//Modal
+//MODAL START
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
@@ -38,7 +38,12 @@ function closeModal(modal) {
 }
 
 
-//Dropdown menu
+// MODAL END
+
+
+
+//DROPDOWN START
+
 
 document.addEventListener("click", e => {
   const isDropdownButton = e.target.matches("[data-dropdown-button]")
@@ -55,3 +60,5 @@ document.addEventListener("click", e => {
     dropdown.classList.remove("active")
   })
 })
+
+//DROPDOWN END
